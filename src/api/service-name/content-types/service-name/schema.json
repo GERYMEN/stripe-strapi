@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_names",
+  "info": {
+    "singularName": "service-name",
+    "pluralName": "service-names",
+    "displayName": "ServiceName",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ServiceName": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "service_names"
+    }
+  }
+}
