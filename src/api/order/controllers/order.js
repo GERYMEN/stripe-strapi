@@ -32,9 +32,18 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
       const paymentIntent =  await stripe.paymentIntents.create({
         amount: 1099,
         currency: 'cny',
-        automatic_payment_methods: {
-          enabled: true,
-        },
+        // automatic_payment_methods: {
+        //   enabled: true,
+        // },
+        payment_method_types: [
+          'bancontact',
+          'card',
+          'eps',
+          'giropay',
+          'ideal',
+          'p24',
+          'sepa_debit',
+        ],
       });
 
     //   // Create order record in Strapi

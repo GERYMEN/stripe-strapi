@@ -15,6 +15,7 @@
     "@strapi/strapi": "4.11.1",
     "better-sqlite3": "8.0.1",
     "develop": "^1.0.0",
+    "strapi-plugin-netlify-deployments": "^2.0.2",
     "strapi-stripe": "^3.4.1",
     "stripe": "^17.2.1"
   },
